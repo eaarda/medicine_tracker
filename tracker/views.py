@@ -17,7 +17,6 @@ def account(request):
 
 def register(request):
     if request.method == 'POST':
-        print(request.POST)
         if 'signup' in request.POST:
             first_name = request.POST['firstname']
             last_name = request.POST['lastname']
