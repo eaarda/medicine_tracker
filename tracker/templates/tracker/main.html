@@ -1,0 +1,67 @@
+<!DOCTYPE html> {% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Tracker</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" />
+</head>
+
+<body>
+    <section class="navigation">
+        <div class="nav-container">
+            <div class="brand">
+                <a href="#!">Medicine Dose Tracker</a>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="#!">Home</a></li>
+                    <li><a href="#!">About</a></li>
+                    <li><a href="#!">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <form action="/register/" name="register" id="register" method="POST">
+        <div class="container2">
+
+            {% csrf_token %} {{ form.as_p }}
+
+            <input type="checkbox" id="mycheck" />
+            <div class="col" style="background: rgba(218, 218, 218, 0.4)">
+                <label for="mycheck" id="signup">Sign Up</label>
+            </div>
+            <div class="col">
+                <label for="mycheck" id="login">Login</label>
+            </div>
+            <div class="box">
+                <div class="log">
+                    <div class="content">
+                        <div class="l-1">
+                            <input type="text" id="firstname" name="firstname" placeholder="First Name" />
+                            <input type="text" id="lastname" name="lastname" placeholder="Last Name" />
+                        </div>
+                        <div class="l-2">
+                            <input type="username" id="username" name="username" placeholder="Username" />
+                            <input type="password" id="password" name="password" placeholder="Password" />
+                        </div>
+                    </div>
+                    <div class="button">
+                        <input class="signup" name="signup" value="signup" type="submit" onClick="document.forms['register'].submit();">
+                        </input>
+                        <input class="login" name="login" value="login" type="submit" onClick="document.forms['register'].submit();">
+                        </input>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+    </form>
+</body>
+<script></script>
+
+</html>

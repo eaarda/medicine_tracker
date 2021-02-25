@@ -1,0 +1,271 @@
+html {
+    height: 100%;
+    background: #0ecde9;
+    /* For older browsers that may not support gradients */
+    background: -webkit-radial-gradient(center, ellipse cover, #0ecde9 0%, #025e83 100%);
+    background: radial-gradient(#0ecde9, #025e83);
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    float: left;
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    padding: 0 20px;
+    line-height: 70px;
+    color: #463f3f;
+    text-decoration: none;
+    font-family: 'open sans', sans-serif;
+}
+
+nav ul li a:hover {
+    color: dodgerblue;
+}
+
+nav ul li a:not(:only-child):after {
+    padding-left: 4px;
+    content: ' ▾';
+}
+
+nav ul li ul li {
+    min-width: 190px;
+}
+
+nav ul li ul li a {
+    padding: 15px;
+    line-height: 20px;
+}
+
+.navigation {
+    height: 70px;
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.brand {
+    position: absolute;
+    padding-left: 20px;
+    float: left;
+    line-height: 70px;
+    text-transform: uppercase;
+    font-size: 1.4em;
+    font-family: 'open sans', sans-serif;
+}
+
+.brand a,
+.brand a:visited {
+    color: #463f3f;
+    text-decoration: none;
+}
+
+.container {
+    width: 950px;
+    margin: 0 auto
+}
+
+.header .navbar {
+    background-color: #b1b4bb;
+    color: white;
+    overflow: hidden;
+}
+
+.header .navbar h2 {
+    float: left
+}
+
+.header .navbar h2 span {
+    color: #0d65d8
+}
+
+.header .navbar ul {
+    list-style: none;
+    padding-left: 0px;
+    overflow: hidden;
+    float: right
+}
+
+.header .navbar ul li {
+    float: left;
+    padding: 20px
+}
+
+.header .navbar ul li a {
+    text-decoration: none;
+    color: #FFF
+}
+
+.header .navbar ul li a:hover {
+    color: #888
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container2 {
+    height: 400px;
+    width: 700px;
+    margin: 100px auto;
+    outline: 2px solid cornflowerblue;
+    position: relative;
+    z-index: 2;
+}
+
+.box {
+    position: absolute;
+    height: 105%;
+    width: 340px;
+    top: -50px;
+    left: 40px;
+    background: white;
+    box-shadow: 0px 0px 25px grey;
+    z-index: 4;
+    padding: 15px;
+    transition: all .5s linear;
+    overflow: hidden;
+}
+
+.container2::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.col {
+    height: 100%;
+    width: 50%;
+    float: left;
+    z-index: 3;
+    position: relative;
+    padding: 40px;
+}
+
+.col:first-child {
+    z-index: 3;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked~div.box {
+    transform: translateX(82%);
+}
+
+#login {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    font-family: 'open sans', sans-serif;
+    border: 1px solid blue;
+    padding: 15px 45px;
+    color: blue;
+    transition: all .5s ease-in-out;
+}
+
+.content {
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 7px 15px;
+    margin-bottom: 28px;
+    font-family: 'open sans', sans-serif;
+    font-size: 16px;
+    border: none;
+    color: grey;
+    border-bottom: 1px solid grey;
+    background: white;
+}
+
+input:focus {
+    outline: none;
+}
+
+.button {
+    height: 45px;
+    overflow: hidden;
+    font-family: 'open sans', sans-serif;
+    margin-top: 40px;
+    width: 100%;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+
+.signup,
+.login {
+    text-align: center;
+}
+
+#login:hover {
+    color: white;
+    background: blue;
+}
+
+#signup {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    font-family: 'open sans', sans-serif;
+    border: 1px solid blue;
+    padding: 15px 45px;
+    color: blue;
+    transition: all .5s ease-in-out;
+}
+
+#signup:hover {
+    color: white;
+    background: blue;
+}
+
+.l-1,
+.l-2 {
+    transition: all .5s linear;
+}
+
+.login,
+.signup {
+    transition: all .5s linear;
+}
+
+input[type="checkbox"]:checked~div.box .log .l-1 {
+    transform: translateY(-100%);
+}
+
+input[type="checkbox"]:checked~div.box .log .l-2 {
+    transform: translateY(-100%);
+}
+
+input[type="checkbox"]:checked~div.box .log .signup {
+    transform: translateY(-48px);
+}
+
+input[type="checkbox"]:checked~div.box .log .login {
+    transform: translateY(-48px);
+}
+
+input::placeholder {
+    color: grey;
+}
