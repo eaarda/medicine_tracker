@@ -1,3 +1,24 @@
-{% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" />
-<h3>Medicine Page</h3>
+<!DOCTYPE html> {% load static %}
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Tracker</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/acc.css' %}" />
+  </head>
+
+  <body>
+    <section class="navigation">
+      <div class="nav-container">
+        <div class="brand">
+          <a href="#!">Medicine Dose Tracker</a>
+        </div>
+        <nav>
+          <ul class="nav-list">
+            <li><a href="#!">Logout</a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+  </body>
+</html>
