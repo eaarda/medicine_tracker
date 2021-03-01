@@ -1,11 +1,3 @@
-body {
-    height: 100%;
-    background: #0ecde9;
-    /* For older browsers that may not support gradients */
-    background: -webkit-radial-gradient(center, ellipse cover, #0ecde9 0%, #025e83 100%);
-    background: radial-gradient(#0ecde9, #025e83);
-}
-
 nav {
     float: right;
 }
@@ -50,6 +42,9 @@ nav ul li ul li a {
 
 .navigation {
     height: 70px;
+    background: #0ecde9;
+    background: -webkit-radial-gradient(center, ellipse cover, #0ecde9 0%, #025e83 100%);
+    background: radial-gradient(#0ecde9, #025e83);
 }
 
 .nav-container {
@@ -115,4 +110,45 @@ nav ul li ul li a {
 
 * {
     box-sizing: border-box;
+}
+
+.row {
+    margin-bottom: 20px;
+}
+
+.button.button-small {
+    height: 30px;
+    line-height: 30px;
+    padding: 0px 10px;
+}
+
+td input[type=text],
+td select {
+    width: 100%;
+    height: 30px;
+    margin: 0;
+    padding: 2px 8px;
+}
+
+th:last-child {
+    text-align: right;
+}
+
+td:last-child {
+    text-align: right;
+}
+
+td:last-child .button {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 0px;
+    margin-bottom: 0px;
+    margin-right: 5px;
+    background-color: #FFF;
+}
+
+td:last-child .button .fa {
+    line-height: 30px;
+    width: 30px;
 }

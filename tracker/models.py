@@ -6,4 +6,4 @@ from django.db import models
 class Medicine(models.Model):
     medicine_name = models.CharField(max_length=80)
     dosage = models.IntegerField()
-    frequency = models.IntegerField()
+    frequency = models.CharField(max_length=80)

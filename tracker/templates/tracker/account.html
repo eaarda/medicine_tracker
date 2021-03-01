@@ -1,62 +1,74 @@
 <!DOCTYPE html> {% load static %}
 
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, inital-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Tracker</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/acc.css' %}" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
-      crossorigin="anonymous"
-    />
-  </head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+</head>
 
-  <body>
+<body>
     <div>
-      <section class="navigation">
-        <div class="nav-container">
-          <div class="brand">
-            <a href="#!">Medicine Dose Tracker </a>
-            <br />Hello, {{user.username}}
-          </div>
-          <nav>
-            <ul class="nav-list">
-              <li><a href="{% url 'logout' %}">Logout</a></li>
-            </ul>
-          </nav>
-        </div>
-      </section>
+        <section class="navigation">
+            <div class="nav-container">
+                <div class="brand">
+                    <a href="#!">Medicine Dose Tracker </a>
+                    <br />Hello, {{user.username}}
+                </div>
+                <nav>
+                    <ul class="nav-list">
+                        <li><a href="{% url 'logout' %}">Logout</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
 
-      <div style="margin-top: 130px" class="container">
-        <table class="table table-hover">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Medicine</th>
-              <th scope="col">Dosage</th>
-              <th scope="col">Frequency</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </body>
+        <div style="margin-top: 100px" class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <br>
+                    <button class="btn btn-default pull-right add-row"><i class="fa fa-plus"></i>&nbsp;&nbsp; Add Row</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table table-bordered table-hover" id="editableTable">
+                        <thead>
+                            <tr>
+                                <th scope="col">Medicine</th>
+                                <th scope="col">Dosage</th>
+                                <th scope="col">Frequency</th>
+                                <th scope="col">Edit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td>
+                                    <a class="button button-small edit" title="Edit">
+                                        <i class="fa fa-pencil"></i>
+                                    </a>
+                                    <a class="button button-small edit" title="Delete">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+</body>
+
 </html>
