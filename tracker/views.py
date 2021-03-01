@@ -1,6 +1,10 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate, login
+from django.contrib.auth import logout as django_logout
 from django.contrib.auth.models import User, auth
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+
 
 # Create your views here.
 
@@ -38,7 +42,8 @@ def register(request):
             username = request.POST['username']
             password = request.POST['password']
 
-            user = auth.authenticate(username=username, password=password)
+            user = auth.authenticate(
+                request, username=username, password=password)
             if not username or not password:
                 print("empty field")
             elif user is not None:
@@ -47,4 +52,10 @@ def register(request):
                 return redirect('account')
             else:
                 print('invalid username or password')
+    return redirect('main')
+
+
+@login_required
+def logout(request):
+    django_logout(request)
     return redirect('main')
